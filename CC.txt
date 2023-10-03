@@ -1,0 +1,176 @@
+// calculator
+#include <stdio.h>
+
+int main() {
+    char operator;
+    double num1;
+    double num2;
+    double result;
+    
+    printf("\nEnter the operator + - / *: ");
+    scanf("%c", &operator);
+    
+    printf("\nNumber 1: ");
+    scanf("%lf", &num1);
+
+    printf("\nNumber 2: ");
+    scanf("%lf", &num2);
+    
+    switch(operator){
+        case '+':
+        result = num1 +  num2;
+        printf("Result: %.0lf", result);
+        break;
+        
+        case '-':
+        result = num1 -  num2;
+        printf("Result: %.2lf", result);
+        break;
+        
+        case '*':
+        result = num1 *  num2;
+        printf("Result: %.2lf", result);
+        break;
+        
+        case '/':
+        result = num1 /  num2;
+        printf("Result: %.2lf", result);
+        break;
+        
+        default:
+        printf("%c is not valid", operator);
+        break;
+        
+        
+    }
+        
+     return 0;
+     
+}
+
+// simple
+#include <stdio.h>
+
+int main() {
+    for(int i = 1; i <= 10; i++)
+    {
+    printf("\n%d", i);
+    }
+
+    return 0;
+}
+
+// prob 1
+#include <stdio.h>
+
+int main() {
+   char word1[50], word2[50], word3[50];
+   
+   printf("Enter word 1: ");
+   scanf("%s", &word1);
+   
+   printf("Enter word 2: ");
+   scanf("%s", &word2);
+   
+   printf("Enter word 3: ");
+   scanf("%s", &word3);
+   
+   printf("%s %s %s", word1, word2, word3);
+   
+   
+   
+    return 0;
+}
+    
+
+
+// temp converter both
+#include <stdio.h>
+
+int main() {
+    int choice;
+    double temp, convertedtemp;
+    
+    printf("choose an option: \n");
+    printf("1.Fahrenheit to celsius \n");
+    printf("2.Celsius to fahrenheit \n");
+    printf("Enter your choice 1 or 2: ");
+    scanf("%d", &choice);
+    
+    if(choice == 1){
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%lf", &temp);
+    convertedtemp = (temp-32)*5.0*9.0;
+    printf("Temperature in celsius: %.2lf", convertedtemp);
+    }
+    else if(choice == 2)
+    {
+    printf("Enter temperature in Celsius: ");
+    scanf("%lf", &temp);
+    convertedtemp = (temp*9.0 / 5.0)+32;
+    printf("Temperature in fahrenheit: %.2lf", convertedtemp);
+        
+    }
+    
+    else{
+        
+        printf("Invalid choice please choose between 1 or 2\n");
+    }
+    
+    
+    
+
+
+    return 0;
+}
+
+// Only one
+#include <stdio.h>
+
+int main() {
+    double celsius, fahrenheit;
+
+    // Input temperature in Celsius
+    printf("Enter temperature in fahrenheit: ");
+    scanf("%lf", &fahrenheit);
+
+    // Convert Celsius to Fahrenheit
+    celsius = (5.0 / 9.0) * (fahrenheit - 32);
+
+    // Output the result
+    printf("Temp in celsius: %.1lf", celsius);
+
+    return 0;
+}
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int numSubjects;
+    double totalGrades = 0.0;
+    
+    printf("Enter the number of subjects: ");
+    scanf("%d", &numSubjects);
+    
+    for(int i = 1; i <= numSubjects; i++){
+        double grade;
+        printf("Enter the grade for subjects %d:", i);
+        scanf("%lf", &grade);
+        
+        
+        totalGrades += grade;
+        
+     }
+     
+     double average = totalGrades / numSubjects;
+     
+     printf("Your average is %.2lf\n", average);
+     
+     
+}
+
+
+
+
+  
