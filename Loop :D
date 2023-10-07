@@ -1,0 +1,43 @@
+// trying loop :D
+#include <stdio.h>
+
+int main() {
+    int choice;
+    double temp, convertedtemp;
+    char operator[50];
+    
+    while(1){
+        printf("\nWould you like to continue? yes or no: ");
+        scanf("%s", operator);
+        
+        if (strcmp(operator, "no") == 0){
+            printf("Exiting the program.\n");
+        }else if (strcmp(operator, "yes") == 0){
+             printf("Choose between option 1 and 2");
+             printf("\n1. Fahrenheit to Celsius");
+             printf("\n2. Celsius to Fahrenheit");
+             printf("\nChoose between 1 and 2: ");
+             scanf("%d", &choice);
+        }else{
+            printf("Pls choose between yes or no\n");
+            break;
+        }
+        
+       if(choice == 1){
+        printf("Enter the temperature in Fahrenheit: ");
+        scanf("%lf", &temp);
+        convertedtemp = 5.0 / 9.0 * ( temp - 32);
+        printf("The temperarture in celsius is %.2lf", convertedtemp);
+     }
+     else if(choice == 2){
+     printf("Enter the temperature in Celsius: ");
+        scanf("%lf", &temp);
+        convertedtemp = (temp * 9.0 / 5.0) + 32;
+        printf("The temperarture in celsius is %.2lf", convertedtemp);
+     }
+    else{
+        printf("%d is not an valid choice", choice);
+    }
+}
+    return 0;
+}
