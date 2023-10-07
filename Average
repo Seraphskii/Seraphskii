@@ -1,0 +1,26 @@
+// average
+#include <stdio.h>
+
+int main() {
+    int numSubjects;
+    double totalGrades = 0.0;
+    
+    printf("Enter the number of subjects: ");
+    scanf("%d", &numSubjects);
+    
+    for(int i = 1; i <= numSubjects; i++){
+        double grade;
+        printf("Enter the grade for subjects %d:", i);
+        scanf("%lf", &grade);
+        
+        
+        totalGrades += grade;
+        
+     }
+     
+     double average = totalGrades / numSubjects;
+     
+     printf("Your average is %.2lf\n", average);
+     
+     
+}
