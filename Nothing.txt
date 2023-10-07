@@ -1,54 +1,5 @@
-// calculator
-#include <stdio.h>
 
-int main() {
-    char operator;
-    double num1;
-    double num2;
-    double result;
-    
-    printf("\nEnter the operator + - / *: ");
-    scanf("%c", &operator);
-    
-    printf("\nNumber 1: ");
-    scanf("%lf", &num1);
-
-    printf("\nNumber 2: ");
-    scanf("%lf", &num2);
-    
-    switch(operator){
-        case '+':
-        result = num1 +  num2;
-        printf("Result: %.0lf", result);
-        break;
-        
-        case '-':
-        result = num1 -  num2;
-        printf("Result: %.2lf", result);
-        break;
-        
-        case '*':
-        result = num1 *  num2;
-        printf("Result: %.2lf", result);
-        break;
-        
-        case '/':
-        result = num1 /  num2;
-        printf("Result: %.2lf", result);
-        break;
-        
-        default:
-        printf("%c is not valid", operator);
-        break;
-        
-        
-    }
-        
-     return 0;
-     
-}
-
-// simple
+// for loop
 #include <stdio.h>
 
 int main() {
@@ -139,32 +90,6 @@ int main() {
     return 0;
 }
 
-// average
-#include <stdio.h>
-
-int main() {
-    int numSubjects;
-    double totalGrades = 0.0;
-    
-    printf("Enter the number of subjects: ");
-    scanf("%d", &numSubjects);
-    
-    for(int i = 1; i <= numSubjects; i++){
-        double grade;
-        printf("Enter the grade for subjects %d:", i);
-        scanf("%lf", &grade);
-        
-        
-        totalGrades += grade;
-        
-     }
-     
-     double average = totalGrades / numSubjects;
-     
-     printf("Your average is %.2lf\n", average);
-     
-     
-}
 
 
 
