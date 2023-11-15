@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int main() {
+    Menu:
+    int want, x, y, z;
+    printf("\n\nProgramming Activities");
+    printf("\n[1] ODD/EVEN.");
+    printf("\n[2] POSITIVE/NEGATIVE.");
+    printf("\n[3] ASCENDING ORDER.");
+    printf("\n[4] DESCENDING ORDER.");
+    printf("\n[5] EXIT.");
+    
+    printf("\n: ");
+    scanf("%d", &want);
+    
+    switch(want){
+        case 1:
+            printf("ODD/EVEN\nEnter a number: ");
+            scanf("%d", &x);
+            if ( x % 2 != 0){
+                printf(" %d is an odd Number.", x);
+            } else {
+                printf("%d is an even Number.", x);
+            }
+            goto Menu;
+            break;
+        
+        case 2:
+            printf("Positive/Negative\nEnter the number: ");
+            scanf("%d", &x);
+            if (x > 0){
+                printf(" %d is a positive Number.", x);
+            }
+            else{
+                printf(" %d is a negative Number.", x);
+            }
+            goto Menu;
+            break;
+        
+        case 3:
+            printf("Ascending\nEnter three numbers: ");
+            scanf("%d %d %d", &x, &y, &z);
+            
+            if (x < y && x < z) {
+                printf("%d - ", x);
+                if (y < z) {
+                    printf("%d - %d", y, z);
+                } else {
+                    printf("%d - %d", z, y);
+                }
+            } else if (y < x && y < z) {
+                printf("%d - ", y);
+                if (x < z) {
+                    printf("%d - %d", x, z);
+                } else {
+                    printf("%d - %d", z, x);
+                }
+            } else {
+                printf("%d - ", z);
+                if (x < y) {
+                    printf("%d - %d", x, y);
+                } else {
+                    printf("%d - %d", y, x);
+                }
+            }
+            goto Menu;
+            break; 
+            
+        case 4:
+            printf("Descending\nEnter three numbers: ");
+            scanf("%d %d %d", &x, &y, &z);
+            
+            if (x > y && x > z) {
+                printf("%d - ", x);
+                if (y > z) {
+                    printf("%d - %d", y, z);
+                } else {
+                    printf("%d - %d", z, y);
+                }
+            } else if (y > x && y > z) {
+                printf("%d - ", y);
+                if (x > z) {
+                    printf("%d - %d", x, z);
+                } else {
+                    printf("%d - %d", z, x);
+                }
+            } else {
+                printf("%d - ", z);
+                if (x > y) {
+                    printf("%d - %d", x, y);
+                } else {
+                    printf("%d - %d", y, x);
+                }
+            }
+            goto Menu;
+            break;     
+            
+       
+        case 5: 
+        printf("Exiting the Program.");
+            break;
+    }
+    return 0;
+}
