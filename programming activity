@@ -100,5 +100,36 @@ int main() {
         printf("Exiting the Program.");
             break;
     }
+
+// odd even sum
+#include <stdio.h>
+
+int main() {
+    int sum_even, sum_odd;
+
+    printf("ODD NUMBERS: ");
+    for(int i = 1; i <= 10; i++){
+        if(i % 2 != 0){
+            if (i != 9) {
+               printf("%d\n\t\t\t ", i);
+            } else {
+               printf("%d", i);
+            }
+            sum_odd += i;
+        }    
+    }    
+    printf("\n\t sum: \t %d", sum_odd);
+
+    printf("\nEVEN NUMBERS: ");
+    for(int i = 0; i <= 10; i++){
+        if(i % 2 == 0){
+            printf("%d ", i);
+            sum_even += i;
+        }
+    }
+    printf("\n\t sum: \t %d", sum_even);
+
+    return 0;
+}
     return 0;
 }
