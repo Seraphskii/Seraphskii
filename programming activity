@@ -100,6 +100,8 @@ int main() {
         printf("Exiting the Program.");
             break;
     }
+        return 0;
+}
 
 // odd even sum
 #include <stdio.h>
@@ -131,5 +133,4 @@ int main() {
 
     return 0;
 }
-    return 0;
-}
+    
