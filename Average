@@ -24,3 +24,47 @@ int main() {
      
      
 }
+
+#include <stdio.h>
+
+int main() {
+    int current_year, current_month, current_day;
+    int birth_year, birth_month, birth_day;
+    int year_diff, month_diff, day_diff;
+
+    printf("Enter the current date (YYYY MM DD): ");
+    scanf("%d %d %d", &current_year, &current_month, &current_day);
+
+    printf("Enter your date of birth (YYYY MM DD): ");
+    scanf("%d %d %d", &birth_year, &birth_month, &birth_day);
+
+    if (current_day >= birth_day) {
+        day_diff = current_day - birth_day;
+    } else {
+        if (current_month == 3) {
+            if ((current_year % 4 == 0 && current_year % 100 != 0) || current_year % 400 == 0) {
+                day_diff = 29 + current_day - birth_day;
+            } else {
+                day_diff = 28 + current_day - birth_day;
+            }
+        } else if (current_month == 1 || current_month == 5 || current_month == 7 || current_month == 8|| current_month == 10 || current_month == 12) {
+            day_diff = 30 + current_day - birth_day;
+        } else {
+            day_diff = 31 + current_day - birth_day;
+        }
+        current_month -= 1;
+    }
+
+    if (current_month >= birth_month) {
+        month_diff = current_month - birth_month;
+    } else {
+        month_diff = 12 + current_month - birth_month;
+        current_year -= 1;
+    }
+
+    year_diff = current_year - birth_year;
+
+    printf("Age: %d years, %d months, %d days\n", year_diff, month_diff, day_diff);
+
+    return 0;
+}
